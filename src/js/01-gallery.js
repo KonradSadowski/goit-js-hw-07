@@ -16,14 +16,14 @@ for (const image of galleryItems) {
   galleryEl.insertAdjacentHTML('afterbegin', imgEl);
 
   galleryEl.addEventListener('click', event => event.preventDefault());
-}
 
-galleryEl.querySelector('.gallery__item').onclick = () => {
-  basicLightbox
-    .create(
+  galleryEl.querySelector('.gallery__item').onclick = () => {
+    basicLightbox
+      .create(
+        `
+          <img src=${image.original}>
       `
-		<img src='https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg'>
-	`
-    )
-    .show();
-};
+      )
+      .show();
+  };
+}
