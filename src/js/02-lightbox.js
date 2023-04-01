@@ -10,7 +10,7 @@ for (const image of galleryItems) {
 
   galleryEL.insertAdjacentHTML('afterbegin', imgEl);
 }
-const lightbox = new SimpleLightbox('.gallery a', {
+var lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionsData: 'alt',
 });
